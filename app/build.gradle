@@ -64,6 +64,6 @@ dependencies {
     compile 'net.danlew:android.joda:2.9.0'
     compile 'com.mikepenz:community-material-typeface:1.2.65.1@aar'
     compile 'com.mikepenz:iconics-core:2.1.0@aar'
-    compile 'com.github.satyan:sugar:1.4'
+    compile 'com.easyliteorm:easyliteorm:1.2.0'
     compile 'com.android.support:design:23.1.1'
 }

@@ -15,7 +15,6 @@ import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.materialdrawer.util.AbstractDrawerImageLoader;
 import com.mikepenz.materialdrawer.util.DrawerImageLoader;
 import com.mikepenz.materialdrawer.util.DrawerUIUtils;
-import com.orm.SugarApp;
 import com.squareup.picasso.Picasso;
 
 import net.danlew.android.joda.JodaTimeAndroid;
@@ -25,7 +24,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 /**
  * Created by Jo on 3/13/2016.
  */
-public class CondocApp extends SugarApp {
+public class CondocApp extends Application {
     ApplicationComponent applicationComponent;
 
     @Override
@@ -123,10 +122,5 @@ public class CondocApp extends SugarApp {
     public static CondocApp get(Context context) {
         return (CondocApp) context.getApplicationContext();
     }
-
-
-
-
-
 
 }
