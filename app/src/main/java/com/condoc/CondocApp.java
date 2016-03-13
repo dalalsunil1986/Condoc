@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.widget.ImageView;
 
 import com.condoc.injection.component.ApplicationComponent;
+import com.condoc.injection.component.DaggerApplicationComponent;
+import com.condoc.injection.module.ApplicationModule;
 import com.mikepenz.community_material_typeface_library.CommunityMaterial;
 import com.mikepenz.iconics.Iconics;
 import com.mikepenz.iconics.IconicsDrawable;
@@ -16,6 +18,8 @@ import com.mikepenz.materialdrawer.util.DrawerUIUtils;
 import com.orm.SugarApp;
 import com.squareup.picasso.Picasso;
 
+import net.danlew.android.joda.JodaTimeAndroid;
+
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
@@ -23,6 +27,34 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
  */
 public class CondocApp extends SugarApp {
     ApplicationComponent applicationComponent;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        generalInit();
+        dependencyInjectionInit();
+        fontsInit();
+        imageLoadingInit();
+    }
+
+    /*
+   * Creates the dagger component that will be
+   * injected throughout the app for dependencies.
+   * */
+    private void dependencyInjectionInit() {
+        applicationComponent = DaggerApplicationComponent.builder()
+                .applicationModule(new ApplicationModule(this))
+                .build();
+
+    }
+
+    private void generalInit() {
+        //Date library that needs initializing for timezone changes etc.
+        JodaTimeAndroid.init(this);
+
+    }
+
 
 
     private void imageLoadingInit()

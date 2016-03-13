@@ -55,10 +55,7 @@ dependencies {
         transitive = true
     }
 
-
-
-
-
+    compile 'com.mobsandgeeks:android-saripaar:2.0.3'
     compile 'com.afollestad:material-dialogs:0.7.8.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'uk.co.chrisjenx:calligraphy:2.1.0'
