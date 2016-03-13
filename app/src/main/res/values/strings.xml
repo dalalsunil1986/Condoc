@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Condoc</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_login_register">LoginRegisterActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
 </resources>

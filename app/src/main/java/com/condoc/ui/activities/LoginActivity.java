@@ -1,5 +1,6 @@
 package com.condoc.ui.activities;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,12 +10,14 @@ import android.view.View;
 
 import com.condoc.R;
 
-public class MainActivity extends BaseActivity {
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,6 +29,11 @@ public class MainActivity extends BaseActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
 }

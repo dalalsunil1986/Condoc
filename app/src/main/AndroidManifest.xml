@@ -15,7 +15,6 @@
         <meta-data
             android:name="VERSION"
             android:value="1" />
-
         <meta-data
             android:name="MODEL_PACKAGE_NAME"
             android:value="com.condoc.db" />
@@ -30,6 +29,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.activities.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.LoginRegisterActivity"
+            android:label="@string/title_activity_login_register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
