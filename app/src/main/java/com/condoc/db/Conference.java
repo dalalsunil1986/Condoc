@@ -17,6 +17,8 @@ public class Conference {
     private String summary;
     private Date date;
     private String location;
+    private String presentedBy;
+    private String adminId;
 
     public String getTopic() {
         return topic;
@@ -56,5 +58,21 @@ public class Conference {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getPresentedBy() {
+        return presentedBy;
+    }
+
+    public void setPresentedBy(String presentedBy) {
+        this.presentedBy = presentedBy;
+    }
+
+    public String getAdminId() {
+        return adminId;
+    }
+
+    public void setAdminId(String adminId) {
+        this.adminId = adminId;
     }
 }
